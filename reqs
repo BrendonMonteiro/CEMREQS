@@ -886,10 +886,7 @@
               <option value="Líder">Líder</option>
             </select>
           </div>
-          <div class="row">
           <input type="text" placeholder="Motivo" required />
-          <input type="date" placeholder="Data" required />
-        </div>
           <button type="submit">Enviar</button>
         </form>
       </div>
@@ -926,10 +923,7 @@
               <option value="Vice-Líder">Vice-Líder</option>
             </select>
           </div>
-          <div class="row">
           <input type="text" placeholder="Motivo" required />
-          <input type="date" placeholder="Data" required />
-        </div>
           <button type="submit">Enviar</button>
         </form>
       </div>
@@ -1234,7 +1228,7 @@ function gatherFormData() {
             const value = input.value.trim();
             if (value) {
                 let formattedValue = value;
-                if (input.type === "date" && (formId === "form1" || formId === "form2" || formId === "form6" || formId === "form11" || formId === "form13" || formId === "form14")) {
+                if (input.type === "date" && (formId === "form1" || formId === "form2" || formId === "form4" || formId === "form5" || formId === "form6" || formId === "form11" || formId === "form13" || formId === "form14")) {
                     const dateParts = value.split("-");
                     formattedValue = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]}`;
                 }
@@ -1269,7 +1263,7 @@ function gatherFormData() {
     formData += placeholdersData;
 
     // Incluir data apenas se for form1, form4, form5, form6, form11
-    if (formId === "form1" || formId === "form2" || formId === "form6" || formId === "form11" || formId === "form13" || formId === "form14") {
+    if (formId === "form1" || formId === "form2" || formId === "form4" || formId === "form5" || formId === "form6" || formId === "form11" || formId === "form13" || formId === "form14") {
         const today = new Date();
         const formattedDate = `${today.getDate().toString().padStart(2, '0')}/${(today.getMonth() + 1).toString().padStart(2, '0')}/${today.getFullYear()}`;
         formData += `[color=#045199][b]Data:[/b][/color] ${formattedDate}\n`;
@@ -1316,7 +1310,7 @@ function gatherFormData() {
                   .fail(function () {
                     alert("Houve um erro! Tente novamente!");
                   });
-              }, 450);
+              }, 500);
             } else {
               alert("Preencha todos os campos!");
             }
