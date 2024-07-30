@@ -1316,7 +1316,7 @@ function gatherFormData() {
                   .fail(function () {
                     alert("Houve um erro! Tente novamente!");
                   });
-              }, 300);
+              }, 450);
             } else {
               alert("Preencha todos os campos!");
             }
@@ -1358,7 +1358,7 @@ function gatherFormData() {
         const credits = document.querySelector(".credits");
         setTimeout(() => {
           credits.classList.add("show");
-        }, 500); // Pequeno atraso para permitir a transição
+        }, 400); // Pequeno atraso para permitir a transição
       }); 
     </script>
     <script>
