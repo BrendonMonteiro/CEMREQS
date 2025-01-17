@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>[CEM] Ranking de Praças</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900;1000&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="https://i.imgur.com/J7AV7XE.gif" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.7.1/css/OverlayScrollbars.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/default.css?1719822682" />
+
+    <link rel="stylesheet" href="./assets/css/responsive.css?" />
+    <link rel="stylesheet" href="./assets/css/emojis.css?" />
+    <link rel="stylesheet" href="./assets/css/themes.css?" />
+    <link rel="stylesheet" href="./assets/css/modalPost0.css?1719822682" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css"
+    />
+    <script src="./config.inc.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/overlayscrollbars/1.13.1/js/OverlayScrollbars.min.js"
+      integrity="sha512-B1xv1CqZlvaOobTbSiJWbRO2iM0iii3wQ/LWnXWJJxKfvIRRJa910sVmyZeOrvI854sLDsFCuFHh4urASj+qgw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.0.3/jquery.cycle.all.min.js"
+      integrity="sha256-hoZ4IJEICzE5WkO5BNpeld27HjOZrSOuz0IWD8MoKdM="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.2/color-thief.min.js"
+      integrity="sha512-mMe7BAZPOkGbq+zhRBMNV3Q+5ZDzcUEOJoUYXbHpEcODkDBYbttaW7P108jX66AQgwgsAjvlP4Ayb/XLJZfmsg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+      integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://apis.google.com/js/client.js?onload=init"></script>
+    <script src="./assets/js/controller.js?150"></script>
+    <script src="./assets/js/autosize.min.js?22"></script>
+    <script src="./assets/js/default.js?1719822682"></script>
+    <script src="./assets/js/tofaci.js?22"></script>
+    <script src="./assets/js/truePage.js?22"></script>
+    <script src="./assets/js/updates.js?"></script>
+    <script src="https://cdn.ckeditor.com/4.20.1/full/ckeditor.js"></script>
+    <style>
+      html {
+        height: 100%;
+        background: linear-gradient(90deg, #045199, #032c53);
+        background-size: 200% 200%;
+        background-attachment: fixed;
+        animation: gradientAnimation 15s ease infinite;
+      }
+
+      @keyframes gradientAnimation {
+        0% {
+          background-position: 0% 50%;
+        }
+
+        50% {
+          background-position: 100% 50%;
+        }
+
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        font-family: "Poppins", sans-serif;
+        overflow-y: auto;
+        background: transparent;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 800px;
+        text-align: center;
+        position: relative;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .logo {
+  width: 100%;
+  max-width: 80%;
+  height: auto;
+  margin: 1%;
+  position: relative;
+  z-index: 0;
+  margin-top: -10px;
+}
+
+.logo-container {
+  position: relative;
+  display: inline-block;
+}
+
+      .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        margin-top: -70px;
+        margin-left: -5%;
+        z-index: 1;
+        width: 110%;
+      }
+
+      .nav-arrow {
+        font-size: 2rem;
+        color: white;
+        opacity: 0.9;
+        cursor: pointer;
+        z-index: 2;
+        transition: transform 0.3s;
+      }
+
+      .nav-arrow:hover {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+
+      .nav-arrow.left {
+        margin-right: 10px;
+      }
+
+      .nav-arrow.right {
+        margin-left: 10px;
+      }
+
+      ::selection {
+        background-color: #0c2d4d;
+        color: #449cee;
+      }
+
+      .button {
+        flex: 1;
+        margin: 0 5px; /* Espaçamento entre botões */
+        padding: 10px 0;
+        background-color: white;
+        color: #045199;
+        border: none;
+        cursor: pointer;
+        border-radius: 1.15rem;
+        height: 90px;
+        font-size: 14px;
+        text-align: center;
+        z-index: 2;
+        position: relative;
+        font-weight: 800;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        filter: grayscale(100%); /* Aplica escala de cinza por padrão */
+      }
+
+      .button img,
+      .button svg {
+        height: 20px; /* Defina aqui o tamanho desejado para os ícones */
+        width: auto; /* Mantém a proporção */
+        margin-top: 3px; /* Ajuste opcional para o espaçamento abaixo do ícone */
+      }
+
+      .button:hover {
+        background-color: #f5dff8;
+        transform: scale(1.01);
+        filter: grayscale(0%); /* Remove a escala de cinza */
+      }
+
+      .button:focus, /* Quando o botão estiver focado */
+    .button:active, /* Quando o botão estiver ativo */
+    .button.selected {
+        /* Classe personalizada para indicar seleção */
+        filter: grayscale(0%); /* Remove a escala de cinza */
+        background: white; /* Remove o gradiente e aplica fundo sólido */
+      }
+
+      .form-container {
+        display: none;
+        margin-top: -10px;
+        margin-bottom: 2rem;
+        padding: 20px;
+        background-color: white;
+        border-radius: 1rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        opacity: 0;
+        transform: translateY(50px);
+        transition: all 0.5s ease;
+      }
+
+      .form-container.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .form-container form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .form-container input,
+      .form-container select,
+      .form-container textarea {
+        height: 55px;
+        background-color: #e7e7e7;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        font-family: "Poppins", sans-serif;
+        font-size: 16px;
+        color: #282828;
+        transition: border-color 0.3s ease;
+      }
+
+      .form-container input:focus,
+      .form-container select:focus,
+      .form-container textarea:focus {
+        border-color: #045199;
+      }
+
+      .form-container input::placeholder,
+      .form-container textarea::placeholder {
+        color: #282828;
+      }
+
+      .form-container select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding-right: 30px;
+        background-image: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 16px 16px;
+      }
+
+      .form-container .checkbox {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        font-size: 14px;
+        color: #545353;
+      }
+
+      .form-container .checkbox input {
+        width: auto;
+        margin-right: 10px;
+      }
+
+      .form-container button {
+    width: 100%; /* Faz o botão ocupar toda a largura disponível do container */
+    height: 70px;
+    font-family: "Poppins", sans-serif;
+    padding: 15px; /* Adiciona espaçamento interno */
+    font-size: 16px; /* Ajusta o tamanho da fonte */
+    border-radius: 10px; /* Deixa as bordas arredondadas */
+    background-color: #045199; /* Cor de fundo */
+    font-family: ;
+     color: white; /* Cor do texto */
+    border: none; /* Remove borda padrão */
+    cursor: pointer; /* Indica que o botão é clicável */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Suaviza alterações de estado */
+}
+
+      .form-container button:hover {
+        background-color: #073f74; /* Cor ao passar o mouse */
+        transform: scale(1.02); /* Leve aumento ao passar o mouse */
+}
+
+      .form-container .row {
+        display: flex;
+        gap: 10px;
+      }
+
+      .form-container .row input,
+      .form-container .row select,
+      .form-container .row textarea {
+        width: calc(50% - 5px);
+      }
+
+      body.scrollable .container {
+        height: auto;
+        transform: translateY(10vh);
+      }
+
+      input.invalid,
+      select.invalid,
+      textarea.invalid {
+        border: 2px solid #d9534f;
+        background-color: #f2dede;
+      }
+
+      input.invalid:focus,
+      select.invalid:focus,
+      textarea.invalid:focus {
+        border-color: #a94442;
+        outline: none;
+      }
+
+      ::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      ::-webkit-scrollbar-track {
+        background: #032546;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #043766;
+        border-radius: 10px;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #043766;
+      }
+      
+      body {
+        scrollbar-width: thin;
+        scrollbar-color: #032546 #043766;
+      }
+
+      .credits {
+        text-align: center;
+        margin-top: 10px;
+        padding: -20px;
+        font-size: 14px;
+        color: #ffffffc8;
+
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 1s ease;
+      }
+
+      .credits p strong {
+        color: rgba(255, 255, 255, 0.95);
+      }
+
+      .credits i {
+        margin-right: 8px;
+      }
+
+      .credits .line-break {
+        display: block;
+        margin-top: -10px;
+      }
+
+      .credits.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .btn {
+        font-family: "Poppins", sans-serif;
+        outline: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 260px;
+        border: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        padding: 16px 20px;
+        color: #045199;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        background-color: white;
+        border-radius: 1.15rem;
+        height: 90px;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 800;
+        margin-top: -100%;
+      }
+      
+      .btn .dropdown {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.btn .dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 20px);
+}
+
+
+      .btn .material-icons {
+        border-radius: 100%;
+        -webkit-animation: ripple 0.6s linear infinite;
+        animation: ripple 0.6s linear infinite;
+      }
+      .btn .dropdown {
+        position: absolute;
+        top: 85%;
+        left: 0;
+        background: #ffffff;
+        width: 90%;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+        z-index: 30;
+        margin-bottom: 1rem;
+      }
+      .btn .dropdown:before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 20px;
+        width: 0;
+        height: 0;
+        box-shadow: 2px -2px 6px rgba(0, 0, 0, 0.05);
+        border-top: 6px solid #ffffff;
+        border-right: 6px solid #ffffff;
+        border-bottom: 6px solid transparent;
+        border-left: 6px solid transparent;
+        transform: rotate(-45deg);
+        mix-blend-mode: multiple;
+      }
+      .btn .dropdown li {
+        z-index: 1;
+        position: relative;
+        background: #ffffff;
+        padding: 0 20px;
+        color: #666;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        filter: grayscale(100%); /* Aplica escala de cinza por padrão */
+        transition: all 0.3s;
+      }
+      .btn .dropdown li:hover {
+        filter: grayscale(0%); /* Remove a escala de cinza */
+      }
+      .btn .dropdown li.active {
+        color: #054886 !important;
+        filter: grayscale(0%); /* Remove a escala de cinza */
+      }
+      .btn .dropdown li:first-child {
+        border-radius: 4px 4px 0 0;
+      }
+      .btn .dropdown li:last-child {
+        border-radius: 0 0 4px 4px;
+      }
+      .btn .dropdown li:last-child a {
+        border-bottom: 0;
+      }
+      .btn .dropdown a {
+        display: block;
+        padding: 16px 0;
+        color: inherit;
+        font-size: 10px;
+        text-decoration: none;
+      }
+
+      /* Estilos gerais (já aplicados a dispositivos móveis com ajustes menores para desktop) */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  overflow-y: auto;
+  background: transparent;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+.logo {
+  width: 100%;
+  max-width: 75%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  z-index: 0;
+  margin-top: -60px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -70px;
+  width: 110%;
+}
+
+/* Estilos específicos para telas pequenas (smartphones) */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 10px;
+    transform: none;
+  }
+
+  .logo {
+    max-width: 250px;
+    margin-top: -40px;
+  }
+
+  .buttons {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: -50px;
+  }
+
+  .nav-arrow {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    height: 70px;
+    font-size: 12px;
+  }
+
+  .form-container {
+    padding: 15px;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .form-container button {
+    height: 60px;
+    font-size: 14px;
+  }
+
+  .btn {
+    min-width: 220px;
+    height: 70px;
+    font-size: 12px;
+    padding: 12px 16px;
+  }
+
+  .credits {
+    font-size: 12px;
+  }
+}
+
+/* Estilos específicos para telas muito pequenas (iPhone SE, Android pequenos) */
+@media (max-width: 375px) {
+  .logo {
+    max-width: 200px;
+  }
+
+  .button {
+    font-size: 10px;
+    height: 60px;
+    padding: 8px 0;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    font-size: 12px;
+    padding: 12px;
+  }
+
+  .btn {
+    min-width: 180px;
+    font-size: 10px;
+    height: 60px;
+  }
+
+  .credits {
+    padding: 10px;
+  }
+}
+
+/* Estilos para tablets e telas maiores */
+@media (min-width: 768px) {
+  .container {
+    max-width: 650px;
+  }
+
+  .button {
+    font-size: 16px;
+    height: 90px;
+  }
+
+  .btn {
+    font-size: 14px;
+    min-width: 260px;
+  }
+}
+
+      /* Media Queries */
+      @media only screen and (max-width: 700px) {
+        body {
+          margin: 0.5rem;
+          margin-left: 0.5rem;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          font-family: "Poppins", sans-serif;
+          overflow-y: auto;
+          background: transparent;
+        }
+
+        .buttons {
+          height: auto;
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .button {
+          width: calc(20% - 5px); /* Ajuste o tamanho dos botões para 90% da largura */
+          font-size: 60%;
+          margin: 2px;
+          padding: 2%;
+          flex: 1 1 15%; /* Altera para ocupar toda a largura em telas menores */
+          text-transform: uppercase;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .button .icon {
+          margin-right: 10px;
+          height: 1.15rem;
+          width: auto;
+        }
+
+        .form-container {
+          margin-left: 0.5rem;
+        }
+
+        .sem-sublinhado {
+          text-decoration: none; /* Remove o sublinhado */
+        }
+        .btn {
+        font-family: "Poppins", sans-serif;
+        outline: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 160px;
+        border: 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        padding: 16px 20px;
+        color: #045199;
+        letter-spacing: 1.2px;
+        text-transform: uppercase;
+        position: relative;
+        width: 100%;
+        cursor: pointer;
+        background-color: white;
+        border-radius: 1.15rem;
+        height: 90px;
+        font-size: 14px;
+        text-align: center;
+        font-weight: 800;
+        margin-top: -100%;
+      }
+
+      .btn .dropdown {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.btn .dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 20px);
+}
+
+      .btn .material-icons {
+        border-radius: 100%;
+        -webkit-animation: ripple 0.6s linear infinite;
+        animation: ripple 0.6s linear infinite;
+      }
+      .btn .dropdown {
+        position: absolute;
+        top: 85%;
+        left: 0;
+        background: #ffffff;
+        width: 60%;
+        margin-left: 20px;
+        border-radius: 4px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease;
+        z-index: 30;
+        margin-bottom: 1rem;
+      }
+      .btn .dropdown:before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: 20px;
+        width: 0;
+        height: 0;
+        box-shadow: 2px -2px 6px rgba(0, 0, 0, 0.05);
+        border-top: 6px solid #ffffff;
+        border-right: 6px solid #ffffff;
+        border-bottom: 6px solid transparent;
+        border-left: 6px solid transparent;
+        transform: rotate(-45deg);
+        mix-blend-mode: multiple;
+      }
+      .btn .dropdown li {
+        z-index: 1;
+        position: relative;
+        background: #ffffff;
+        padding: 0 20px;
+        color: #666;
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        filter: grayscale(100%); /* Aplica escala de cinza por padrão */
+        transition: all 0.3s;
+      }
+      .btn .dropdown li:hover {
+        filter: grayscale(0%); /* Remove a escala de cinza */
+      }
+      .btn .dropdown li.active {
+        color: #054886 !important;
+        filter: grayscale(0%); /* Remove a escala de cinza */
+      }
+      .btn .dropdown li:first-child {
+        border-radius: 4px 4px 0 0;
+      }
+      .btn .dropdown li:last-child {
+        border-radius: 0 0 4px 4px;
+      }
+      .btn .dropdown li:last-child a {
+        border-bottom: 0;
+      }
+      .btn .dropdown a {
+        display: block;
+        padding: 16px 0;
+        color: inherit;
+        font-size: 10px;
+        text-decoration: none;
+      }
+      }
+      .loader-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: #054886;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Mantém o loader acima de todo o conteúdo */
+        }
+
+        .load {
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+
+        .load img {
+            position: absolute;
+            border-radius: 50%;
+            animation: spin 2s ease infinite;
+        }
+
+        .load img:nth-child(1) {
+            animation-delay: -1.5s;
+        }
+
+        .load img:nth-child(2) {
+            animation-delay: -1s;
+        }
+
+        .load img:nth-child(3) {
+            animation-delay: -0.5s;
+        }
+
+        .load img:nth-child(4) {
+            animation-delay: 0s;
+        }
+
+        @keyframes spin {
+            0%, 100% {
+                transform: translate(0);
+            }
+            25% {
+                transform: translate(160%);
+            }
+            50% {
+                transform: translate(160%, 160%);
+            }
+            75% {
+                transform: translate(0, 160%);
+            }
+        }
+
+        .fade-out {
+            animation: fadeOut 2s ease forwards;
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .icon {
+            width: 25px;
+            height: auto;
+        }
+          /* Estilização do fundo embaçado */
+  .overlay {
+    position: fixed;
+    font-family: "Poppins", sans-serif;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+  }
+
+  /* Estilização da pop-up */
+  .popup {
+        position: fixed;
+        font-family: "Poppins", sans-serif;
+        bottom: 20px;
+        right: 20px;
+        width: 300px;
+        background: rgb(255, 255, 255); /* Fundo semi-transparente */
+        color: rgb(0, 0, 0);
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        opacity: 0; /* Inicialmente invisível */
+        transform: translateX(20px); /* Leve deslocamento inicial */
+        transition: opacity 0.8s ease, transform 0.8s ease; /* Transição suave */
+    }
+
+    .popup.show {
+        opacity: 1; /* Visível */
+        transform: translateX(0); /* Sem deslocamento */
+    }
+
+    .popup.hide {
+        opacity: 0; /* Desaparece */
+        transform: translateX(500px); /* Move para fora da tela pela direita */
+    }
+
+    .popup-content {
+        padding: 15px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .close-popup {
+    position: absolute;
+    right: 10px;
+    margin-top: 45%;
+    background-color: transparent;
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.close-popup:hover {
+    color: red; /* Cor muda ao passar o mouse */
+}
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .overlay {
+    position: fixed;
+    font-family: "Poppins", sans-serif;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+  }
+
+  /* Estilização da pop-up */
+  .popup3 {
+    position: fixed;
+    font-family: "Poppins", sans-serif;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1100;
+    text-align: center;
+    display: none;
+  }
+
+  .popup3 h2 {
+    font-family: "Poppins", sans-serif;
+    margin: 0 0 10px;
+  }
+
+  .popup3 button {
+    background: #054886;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .popup3 button:hover {
+    font-family: "Poppins", sans-serif;
+    background: #054077;
+  }
+    </style>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+  </head>
+  <body>
+    <div id="popup-info" class="popup">
+        <div class="popup-content">
+            <button class="close-popup" onclick="closePopupInfo()">&times;</button>
+            <p style="text-align: justify;">
+                O <b style="color: #054077;">Ranking de Praças</b> quinzenal tem como objetivo ser acessível a todo o 
+                <b style="color: #054077;">Corpo de Praças</b>, incentivando a realização de diversas atividades organizadas pela 
+                subcompanhia <b style="color: #054077;">Centro de Elitização Militar</b>.
+            </p>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <div class="popup3" id="successPopup3">
+        <b style="color: #054077;"><h2>Postagem realizada!</h2></b>
+        <p>Seus pontos foram resgatados com sucesso! <br><b style="color: #054077;"><i>#UmBrindeAoSucesso</i></b></p>
+        <button onclick="closePopup3()">Conferir Relatório</button>
+        <button onclick="reloadPage()">Enviar Novamente</button>
+    </div>
+    <div class="loader-container" id="loader">
+        <div class="load">
+            <img src="https://i.imgur.com/J7AV7XE.gif" alt="Logo 1" />
+            <img src="https://i.imgur.com/J7AV7XE.gif" alt="Logo 2" />
+            <img src="https://i.imgur.com/J7AV7XE.gif" alt="Logo 3" />
+            <img src="https://i.imgur.com/J7AV7XE.gif" alt="Logo 4" />
+        </div>
+    </div>
+  <div class="container">
+  <div class="logo-container">
+    <img class="logo" alt="Logo" src="https://i.imgur.com/PsGFec6.png" />
+  </div>
+  <div class="form-container" id="form1">
+    <form onsubmit="event.preventDefault(); submitForm1();" id="enviar_rl">
+        <input required="" name="nickname" placeholder="Seu nickname" type="text" />
+        <select name="tipo_pontos" required style="width: 100%; height: 75px; font-size: 16px;">
+            <option value="" disabled selected>Tipo</option>
+            <option value="Alistar um (1) civil">Alistar um (1) civil</option>
+            <option value="Elogiar um subalterno em público">Elogiar um subalterno em público</option>
+            <option value="Promover quatro (4) subalternos">Promover quatro (4) subalternos</option>
+            <option value="Gratificar com quatro (4) subalternos medalhas temporárias positivas">Gratificar com quatro (4) subalternos medalhas temporárias positivas</option>
+            <option value="Ser gratificado quatro (4) vezes com medalhas temporárias positivas">Ser gratificado quatro (4) vezes com medalhas temporárias positivas</option>
+            <option value="Apresentar o Ranking de Atividades a outro praça">Apresentar o Ranking de Atividades a outro praça</option>
+            <option value="Participar integralmente de eventos oficiais">Participar integralmente de eventos oficiais</option>
+            <option value="Cumprir a meta de um grupo de tarefas">Cumprir a meta de um grupo de tarefas</option>
+            <option value="Projeto aprovado em um grupo de tarefas">Projeto aprovado em um grupo de tarefas</option>
+            <option value="Correção aprovada em um grupo de tarefas">Correção aprovada em um grupo de tarefas</option>
+            <option value="Projeto aprovado pela Corregedoria e/ou Supremacia">Projeto aprovado pela Corregedoria e/ou Supremacia</option>
+            <option value="Promoção de patente/cargo">Promoção de patente/cargo</option>
+            <option value="Promoção de cargo no grupo de tarefas">Promoção de cargo no grupo de tarefas</option>
+            <option value="Acompanhamento ou missões concluídas">Acompanhamento ou missões concluídas</option>
+            <option value="Conclusão do Curso de Formação de Oficiais (CFO)">Conclusão do Curso de Formação de Oficiais (CFO)</option>
+            <option value="Destaque na companhia/primeiro ou segundo lugar no pódio de meta">Destaque na companhia/primeiro ou segundo lugar no pódio de meta</option>
+            <option value="Participar/ministrar uma atividade e/ou rondas postadas no Setor de Relações Públicas">Participar/ministrar uma atividade e/ou rondas postadas no Setor de Relações Públicas</option>
+            <option value="Destaque em eventos oficiais">Destaque em eventos oficiais</option>
+            <option value="Destaque como praça na votação de melhores oficiais da quinzena">Destaque como praça na votação de melhores oficiais da quinzena</option>
+        </select>
+        <input required="" name="comprovation" placeholder="Comprovações" type="text" />
+        <input required="" name="data" type="hidden" id="data" />
+        <button type="submit">Enviar</button>
+    </form>
+  </div>
+  <div class="credits">
+    <p>
+      <i class="fas fa-code"></i> Desenvolvimento por <strong>.Brendon</strong>.
+    </p>
+    <p class="line-break">
+      <i class="far fa-registered"></i> Todos os direitos reservados ao
+      <strong> Centro de Elitização Militar</strong>.
+    </p>
+  </div>
+</div>
+</div>
+<textarea id="fa-generated-message" style="display: none;"></textarea>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://forumeiros.github.io/assets/src/form-generator/form-replace.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+<script>
+    function reloadPage() {
+        location.reload();  // Recarrega a página
+    }
+</script>
+<script>
+    // Função para formatar a data no formato "dd/mm/yyyy HH:MM:SS"
+    function formatDate(date) {
+      const day = String(date.getDate()).padStart(2, '0');
+      const month = String(date.getMonth() + 1).padStart(2, '0'); // Mês começa do zero
+      const year = date.getFullYear();
+      const hours = String(date.getHours()).padStart(2, '0');
+      const minutes = String(date.getMinutes()).padStart(2, '0');
+      const seconds = String(date.getSeconds()).padStart(2, '0');
+      return `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
+    }
+  
+    // Preencher o campo invisível com a data e hora formatada
+    document.getElementById('data').value = formatDate(new Date());
+  </script>
+<script>
+    // Função para fechar o pop-up de informações
+    function closePopupInfo() {
+        const popup = document.getElementById('popup-info');
+        popup.classList.remove('show'); // Remove visibilidade
+        popup.classList.add('hide'); // Adiciona o efeito de deslizar para fora
+        setTimeout(() => {
+            popup.style.display = 'none'; // Remove completamente após a transição
+        }, 800); // Tempo igual ao da transição no CSS
+    }
+
+    // Função para exibir o pop-up de informações com efeito
+    function showPopup() {
+        const popup = document.getElementById('popup-info');
+        popup.classList.add('show');
+    }
+
+    // Exibe o pop-up automaticamente após o carregamento da página
+    document.addEventListener('DOMContentLoaded', () => {
+        const popup = document.getElementById('popup-info');
+        popup.style.display = 'block'; // Garante que o pop-up esteja visível no DOM
+        setTimeout(showPopup, 2000); // Leve atraso para ativar a transição
+    });
+
+    // Função de fechamento para o pop-up de sucesso
+    function closePopup3() {
+        document.querySelector(".overlay").style.display = "none";
+        document.getElementById("successPopup3").style.display = "none";
+  
+        // Redireciona para a página de relatórios
+        window.location.href =
+            "https://docs.google.com/spreadsheets/d/1z_RxKOyJRsiaDBjSuzyxFstsir1DcDi8piFJCSJ-biI/edit?usp=sharing";
+    }
+
+    // Função para mostrar o pop-up de sucesso
+    function showSuccessPopup3() {
+        // Simula tempo de envio antes de reativar o botão
+        setTimeout(() => {
+            document.querySelector(".overlay").style.display = "block";
+            document.getElementById("successPopup3").style.display = "block";
+        }, 1000);
+    }
+
+    // Função genérica para enviar formulários
+    function submitForm(formId) {
+        const botao = document.querySelector(`#${formId} button[type='submit']`);
+        botao.textContent = "Enviando...";
+        botao.disabled = true;
+
+        let formData = $(`#${formId} form`).serializeArray();
+        let processedData = processFields(formData);
+
+        $.ajax({
+            url: "https://api.apispreadsheets.com/data/NKYf4U6zB9WxZi7Y/",
+            type: "post",
+            data: processedData,
+            success: function(response) {
+                console.log("Formulário enviado com sucesso!", response);
+                showSuccessPopup3();
+            },
+            error: function(xhr, status, error) {
+                console.error("Erro ao enviar formulário:", error);
+                botao.textContent = "Enviar";
+                botao.disabled = false;
+                alert("Erro ao enviar o formulário. Tente novamente.");
+            }
+        });
+    }
+
+    // Funções específicas para enviar os formulários
+    function submitForm1() { submitForm("form1"); }
+
+    // Função para processar os campos do formulário (placeholder, ajuste conforme necessário)
+    function processFields(data) {
+        // Aqui você pode realizar qualquer processamento necessário nos dados antes de enviá-los
+        return data;
+    }
+</script> 
+<script>
+    let activeForm = null;
+  let currentIndex = 0;
+  const buttons = document.querySelectorAll(".button");
+  const totalButtons = buttons.length;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const credits = document.querySelector(".credits");
+    setTimeout(() => {
+      credits.classList.add("show");
+    }, 500); // Pequeno atraso para permitir a transição
+  });
+
+  function toggleForm(formId) {
+    const newForm = document.getElementById(formId);
+    const body = document.body;
+
+    if (activeForm && activeForm !== newForm) {
+      activeForm.style.display = "none";
+      activeForm.classList.remove("active");
+    }
+
+    newForm.style.display = "flex";
+    setTimeout(() => {
+      newForm.classList.add("active");
+      newForm.style.display = "block";
+    }, 10); // Pequeno atraso para permitir a transição
+    activeForm = newForm;
+    body.classList.add("scrollable");
+  }
+
+  toggleForm("form1");
+
+  </script>
+  <script>
+    document.querySelectorAll("form").forEach(form => {
+        form.addEventListener("submit", function(event) {
+            // Evita o envio imediato do formulário para ver o efeito
+            event.preventDefault();
+            
+            // Seleciona o botão de envio dentro do formulário atual
+            const botao = form.querySelector("button[type='submit']");
+            botao.textContent = "Enviando...";
+            botao.disabled = true;
+
+            // Simula um tempo de espera ou envio
+            setTimeout(() => {
+                botao.textContent = "Enviado!";
+            }, 2000); // 2000ms para exemplo; remova o setTimeout no uso real
+        });
+    });
+</script>
+<script>
+  // Função para remover o loader com fade-out
+  function removeLoader() {
+      var loader = document.getElementById('loader');
+      loader.classList.add('fade-out');
+      loader.addEventListener('animationend', function () {
+          loader.style.display = 'none';
+          document.body.style.overflow = 'auto'; // Restaura o scroll
+      });
+  }
+
+  // Espera 5 segundos e depois chama a função para remover o loader
+  window.onload = function () {
+      setTimeout(removeLoader, 900); // Altere o tempo aqui se necessário
+  };
+</script>
+</body>
+</html>
