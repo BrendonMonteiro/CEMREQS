@@ -1043,12 +1043,13 @@ body {
 
             <option value="Promover quatro (4) subalternos">Promover quatro (4) subalternos</option>
             <option value="Destaque como praça na votação de melhores oficiais da quinzena">Destaque como praça na votação de melhores oficiais da quinzena</option>
-            <option value="Projeto aprovado em um grupo de tarefas">Projeto aprovado em um grupo de tarefas</option>
+            <option value="Sugestão aprovada em um grupo de tarefas">Sugestão aprovada em um grupo de tarefas</option>
             <option value="Promoção de patente/cargo">Promoção de patente/cargo</option>
             <option value="Promoção de cargo no grupo de tarefas">Promoção de cargo no grupo de tarefas</option>
             <option value="Acompanhamento ou missões concluídas">Acompanhamento ou missões concluídas</option>
             <option value="Participar/ministrar uma atividade e/ou rondas postadas no Setor de Relações Públicas">Participar/ministrar uma atividade e/ou rondas postadas no Setor de Relações Públicas</option>
 
+            <option value="Projeto aprovado em um grupo de tarefas">Projeto aprovado em um grupo de tarefas</option>
             <option value="Projeto aprovado pela Corregedoria e/ou Supremacia">Projeto aprovado pela Corregedoria e/ou Supremacia</option>
             <option value="Conclusão do Curso de Formação de Oficiais (CFO)">Conclusão do Curso de Formação de Oficiais (CFO)</option>
             <option value="Destaque na companhia como primeiro/segundo lugar no pódio de melhores da semana.">Destaque na companhia como primeiro/segundo lugar no pódio de melhores da semana</option>
