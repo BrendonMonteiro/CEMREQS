@@ -1034,7 +1034,6 @@ body {
             <option value="" disabled selected>Tipo</option>
             <option value="Alistar um (1) civil">Alistar um (1) civil</option>
             <option value="Elogiar um subalterno em público">Elogiar um subalterno em público</option>
-            <option value="Promover quatro (4) subalternos">Promover quatro (4) subalternos</option>
             <option value="Gratificar subalternos com quatro (4) medalhas temporárias positivas">Gratificar com quatro (4) subalternos medalhas temporárias positivas</option>
             <option value="Ser gratificado quatro (4) vezes com medalhas temporárias positivas">Ser gratificado quatro (4) vezes com medalhas temporárias positivas</option>
             <option value="Apresentar o Ranking de Atividades a outro praça">Apresentar o Ranking de Atividades a outro praça</option>
@@ -1052,8 +1051,9 @@ body {
 
             <option value="Projeto aprovado pela Corregedoria e/ou Supremacia">Projeto aprovado pela Corregedoria e/ou Supremacia</option>
             <option value="Conclusão do Curso de Formação de Oficiais (CFO)">Conclusão do Curso de Formação de Oficiais (CFO)</option>
-            <option value="Destaque na companhia/primeiro ou segundo lugar no pódio de meta">Destaque na companhia/primeiro ou segundo lugar no pódio de meta</option>
+            <option value="Destaque na companhia como primeiro/segundo lugar no pódio de melhores da semana.">Destaque na companhia como primeiro/segundo lugar no pódio de melhores da semana</option>
             <option value="Destaque em eventos oficiais, como Aulas Gerais e/ou treinamentos realizados pelo CEM">Destaque em eventos oficiais, como Aulas Gerais e/ou treinamentos realizados pelo CEM</option>
+            <option value="Destaque na companhia como melhor membro do mês">Destaque na companhia como melhor membro do mês</option>
         </select>
         <input required="" name="comprovation" placeholder="Comprovações" type="text" />
         <input required="" name="data" type="hidden" id="data" />
