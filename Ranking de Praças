@@ -297,7 +297,6 @@
     font-size: 16px; /* Ajusta o tamanho da fonte */
     border-radius: 10px; /* Deixa as bordas arredondadas */
     background-color: #045199; /* Cor de fundo */
-    font-family: ;
      color: white; /* Cor do texto */
     border: none; /* Remove borda padrão */
     cursor: pointer; /* Indica que o botão é clicável */
@@ -1036,22 +1035,25 @@ body {
             <option value="Alistar um (1) civil">Alistar um (1) civil</option>
             <option value="Elogiar um subalterno em público">Elogiar um subalterno em público</option>
             <option value="Promover quatro (4) subalternos">Promover quatro (4) subalternos</option>
-            <option value="Gratificar com quatro (4) subalternos medalhas temporárias positivas">Gratificar com quatro (4) subalternos medalhas temporárias positivas</option>
+            <option value="Gratificar subalternos com quatro (4) medalhas temporárias positivas">Gratificar com quatro (4) subalternos medalhas temporárias positivas</option>
             <option value="Ser gratificado quatro (4) vezes com medalhas temporárias positivas">Ser gratificado quatro (4) vezes com medalhas temporárias positivas</option>
             <option value="Apresentar o Ranking de Atividades a outro praça">Apresentar o Ranking de Atividades a outro praça</option>
-            <option value="Participar integralmente de eventos oficiais">Participar integralmente de eventos oficiais</option>
+            <option value="Participar integralmente de eventos oficiais, como Aulas Gerais e/ou treinamentos realizados pelo CEM">Participar integralmente de eventos oficiais, como Aulas Gerais e/ou treinamentos realizados pelo CEM</option>
             <option value="Cumprir a meta de um grupo de tarefas">Cumprir a meta de um grupo de tarefas</option>
-            <option value="Projeto aprovado em um grupo de tarefas">Projeto aprovado em um grupo de tarefas</option>
             <option value="Correção aprovada em um grupo de tarefas">Correção aprovada em um grupo de tarefas</option>
-            <option value="Projeto aprovado pela Corregedoria e/ou Supremacia">Projeto aprovado pela Corregedoria e/ou Supremacia</option>
+
+            <option value="Promover quatro (4) subalternos">Promover quatro (4) subalternos</option>
+            <option value="Destaque como praça na votação de melhores oficiais da quinzena">Destaque como praça na votação de melhores oficiais da quinzena</option>
+            <option value="Projeto aprovado em um grupo de tarefas">Projeto aprovado em um grupo de tarefas</option>
             <option value="Promoção de patente/cargo">Promoção de patente/cargo</option>
             <option value="Promoção de cargo no grupo de tarefas">Promoção de cargo no grupo de tarefas</option>
             <option value="Acompanhamento ou missões concluídas">Acompanhamento ou missões concluídas</option>
+            <option value="Participar/ministrar uma atividade e/ou rondas postadas no Setor de Relações Públicas">Participar/ministrar uma atividade e/ou rondas postadas no Setor de Relações Públicas</option>
+
+            <option value="Projeto aprovado pela Corregedoria e/ou Supremacia">Projeto aprovado pela Corregedoria e/ou Supremacia</option>
             <option value="Conclusão do Curso de Formação de Oficiais (CFO)">Conclusão do Curso de Formação de Oficiais (CFO)</option>
             <option value="Destaque na companhia/primeiro ou segundo lugar no pódio de meta">Destaque na companhia/primeiro ou segundo lugar no pódio de meta</option>
-            <option value="Participar/ministrar uma atividade e/ou rondas postadas no Setor de Relações Públicas">Participar/ministrar uma atividade e/ou rondas postadas no Setor de Relações Públicas</option>
-            <option value="Destaque em eventos oficiais">Destaque em eventos oficiais</option>
-            <option value="Destaque como praça na votação de melhores oficiais da quinzena">Destaque como praça na votação de melhores oficiais da quinzena</option>
+            <option value="Destaque em eventos oficiais, como Aulas Gerais e/ou treinamentos realizados pelo CEM">Destaque em eventos oficiais, como Aulas Gerais e/ou treinamentos realizados pelo CEM</option>
         </select>
         <input required="" name="comprovation" placeholder="Comprovações" type="text" />
         <input required="" name="data" type="hidden" id="data" />
