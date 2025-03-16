@@ -1034,7 +1034,7 @@ body {
             <option value="" disabled selected>Tipo</option>
             <option value="Alistar um (1) civil">Alistar um (1) civil</option>
             <option value="Elogiar um subalterno em público">Elogiar um subalterno em público</option>
-            <option value="Gratificar subalternos com quatro (4) medalhas temporárias positivas">Gratificar subalternos com quatro (4) medalhas temporárias positivas</option>
+            <option value="Gratificar subalternos quatro (4) vezes com medalhas temporárias positivas">Gratificar subalternos quatro (4) vezes com medalhas temporárias positivas</option>
             <option value="Ser gratificado quatro (4) vezes com medalhas temporárias positivas">Ser gratificado quatro (4) vezes com medalhas temporárias positivas</option>
             <option value="Apresentar o Ranking de Atividades a outro praça">Apresentar o Ranking de Atividades a outro praça</option>
             <option value="Participar integralmente de eventos oficiais, como Aulas Gerais e/ou treinamentos realizados pelo CEM">Participar integralmente de eventos oficiais, como Aulas Gerais e/ou treinamentos realizados pelo CEM</option>
@@ -1050,7 +1050,7 @@ body {
             <option value="Participar/ministrar uma atividade e/ou rondas postadas no Setor de Relações Públicas">Participar/ministrar uma atividade e/ou rondas postadas no Setor de Relações Públicas</option>
 
             <option value="Projeto aprovado em um grupo de tarefas">Projeto aprovado em um grupo de tarefas</option>
-            <option value="Projeto aprovado pela Corregedoria e/ou Supremacia">Projeto aprovado pela Corregedoria e/ou Supremacia</option>
+            <option value="Proposta aprovada pela Corregedoria e/ou Supremacia">Proposta aprovada pela Corregedoria e/ou Supremacia</option>
             <option value="Conclusão do Curso de Formação de Oficiais (CFO)">Conclusão do Curso de Formação de Oficiais (CFO)</option>
             <option value="Destaque na companhia como primeiro/segundo lugar no pódio de melhores da semana">Destaque na companhia como primeiro/segundo lugar no pódio de melhores da semana</option>
             <option value="Destaque em eventos oficiais, como Aulas Gerais e/ou treinamentos realizados pelo CEM">Destaque em eventos oficiais, como Aulas Gerais e/ou treinamentos realizados pelo CEM</option>
